@@ -1,5 +1,5 @@
-nnoremap <silent> <leader>a :set opfunc=Search<CR>g@
-vnoremap <silent> <leader>a :<C-u>call Search(visualmode(), 1)<CR>
+nnoremap <silent> z/ :set opfunc=Search<CR>g@
+vnoremap <silent> z/ :<C-u>call Search(visualmode(), 1)<CR>
 
 
 function! Search(type, ...)
