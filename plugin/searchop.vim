@@ -7,5 +7,6 @@ function! Search(type, ...)
 
 	let @/ = escape(@@, '\')
 	call histadd('/', @/)
-	normal! n
+
+	call feedkeys('n', 't')
 endfunction
