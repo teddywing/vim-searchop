@@ -1,3 +1,9 @@
+if exists('g:loaded_searchop')
+	finish
+endif
+let g:loaded_searchop = 1
+
+
 nnoremap <silent> z* :set opfunc=searchop#SearchForward<CR>g@
 vnoremap <silent> z* :<C-u>call searchop#SearchForward(visualmode(), 1)<CR>
 
