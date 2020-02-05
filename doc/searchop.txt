@@ -1,0 +1,43 @@
+*searchop.txt*	A search operator
+
+Author:  Teddy Wing <http://teddywing.com>
+License: GPLv3+
+Version: 0.0.1
+
+==============================================================================
+INTRODUCTION                                           *searchop-introduction*
+
+TODO
+
+==============================================================================
+MAPPINGS                                                   *searchop-mappings*
+
+Custom mappings can be defined using the included |<Plug>| mappings: >
+	nmap <Leader>/ <Plug>(searchop-forward)
+<
+
+							*searchop-zstar* *searchop-<Plug>(searchop-forward)*
+z*{motion}			Search forward for {motion}.
+
+							*searchop-z#* *searchop-<Plug>(searchop-backward)*
+z#{motion}			Search backward for {motion}.
+
+==============================================================================
+LICENSE                                                     *searchop-license*
+
+Copyright (c) 2020  Teddy Wing
+
+Searchop is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Searchop is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Searchop. If not, see <https://www.gnu.org/licenses/>.
+
+ vim:tw=78:ts=8:ft=help:norl:
