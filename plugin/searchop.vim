@@ -5,9 +5,15 @@ vnoremap <silent> z/ :<C-u>call Search(visualmode(), 1)<CR>
 function! Search(type, ...)
 	let user_unnamed_register = @@
 
-	silent execute "normal! `[v`]y"
+	if a:0
+		silent execute "normal! gvy"
+	elseif a:type == 'line'
+		silent execute "normal! '[V']y"
+	else
+		silent execute "normal! `[v`]y"
+	endif
 
-	let @/ = escape(@@, '\')
+	let @/ = substitute(escape(@@, '\'), '\n', '\\n', 'g')
 	call histadd('/', @/)
 
 	call feedkeys('n', 't')
