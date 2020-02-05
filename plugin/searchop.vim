@@ -1,5 +1,8 @@
-nnoremap <silent> z/ :set opfunc=Search<CR>g@
-vnoremap <silent> z/ :<C-u>call Search(visualmode(), 1)<CR>
+nnoremap <silent> z/ :set opfunc=SearchForward<CR>g@
+vnoremap <silent> z/ :<C-u>call SearchForward(visualmode(), 1)<CR>
+
+nnoremap <silent> z# :set opfunc=SearchBackward<CR>g@
+vnoremap <silent> z# :<C-u>call SearchBackward(visualmode(), 1)<CR>
 
 
 function! Search(type, ...)
@@ -16,7 +19,17 @@ function! Search(type, ...)
 	let @/ = substitute(escape(@@, '\'), '\n', '\\n', 'g')
 	call histadd('/', @/)
 
-	call feedkeys('n', 't')
-
 	let @@ = user_unnamed_register
+endfunction
+
+function! SearchForward(type, ...)
+	call call('Search', [a:type] + a:000)
+
+	call feedkeys('n', 't')
+endfunction
+
+function! SearchBackward(type, ...)
+	call call('Search', [a:type] + a:000)
+
+	call feedkeys('N', 't')
 endfunction
