@@ -1,5 +1,5 @@
-nnoremap <silent> z/ :set opfunc=SearchForward<CR>g@
-vnoremap <silent> z/ :<C-u>call SearchForward(visualmode(), 1)<CR>
+nnoremap <silent> z* :set opfunc=SearchForward<CR>g@
+vnoremap <silent> z* :<C-u>call SearchForward(visualmode(), 1)<CR>
 
 nnoremap <silent> z# :set opfunc=SearchBackward<CR>g@
 vnoremap <silent> z# :<C-u>call SearchBackward(visualmode(), 1)<CR>
