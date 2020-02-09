@@ -7,7 +7,10 @@ Version: 0.0.1
 ==============================================================================
 INTRODUCTION                                           *searchop-introduction*
 
-TODO
+Searchop provides operators to start searching using a motion. The included
+operators are similar to the |#| and |star| commands, where instead of
+searching for the keyword under the cursor, the motion becomes the search
+term.
 
 ==============================================================================
 MAPPINGS                                                   *searchop-mappings*
