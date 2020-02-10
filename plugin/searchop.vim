@@ -28,12 +28,16 @@ vnoremap <silent> <Plug>(searchop-backward)
 	\ :<C-u>call searchop#SearchBackward(visualmode(), 1)<CR>
 
 
-if !hasmapto('<Plug>(searchop-forward)') && !maparg('z*', 'n')
+if !hasmapto('<Plug>(searchop-forward)', 'n') && !maparg('z*', 'n')
 	nmap z* <Plug>(searchop-forward)
+endif
+if !hasmapto('<Plug>(searchop-forward)', 'v') && !maparg('z*', 'v')
 	vmap z* <Plug>(searchop-forward)
 endif
 
-if !hasmapto('<Plug>(searchop-backward)') && !maparg('z#', 'n')
+if !hasmapto('<Plug>(searchop-backward)', 'n') && !maparg('z#', 'n')
 	nmap z# <Plug>(searchop-backward)
+endif
+if !hasmapto('<Plug>(searchop-backward)', 'v') && !maparg('z#', 'v')
 	vmap z# <Plug>(searchop-backward)
 endif
